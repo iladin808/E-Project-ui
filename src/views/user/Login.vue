@@ -7,16 +7,16 @@
 					<el-row class="mb-3">
 						<el-col :span="24" class="text-8" style="text-align: center; font-weight: 400; margin: 10px 0px">
 							<span style="position: relative">
-								<el-avatar v-if="options.logoType === 'img'" shape="square" :size="48" :src="APP_IMG_LOGO" style="margin-right: 130px" />
-								<SvgIcon v-else :icon-name="APP_SVG_LOGO" class="mr-1 text-18" />
+								<el-avatar v-if="options.logoType === 'img'" shape="square" :size="58" :src="APP_IMG_LOGO" style="margin-right: 130px" />
+								<SvgIcon v-else :icon-name="!!appState.params.app_svg_logo ? appState.params.app_svg_logo : APP_SVG_LOGO" class="mr-1 text-28" />
 								<div class="ml-1" style="">
-									{{ APP_NAME }}
+									{{ !!appState.params.app_name ? appState.params.app_name : APP_NAME }}
 								</div>
 							</span>
 						</el-col>
 						<el-col :span="24" class="text-5" style="text-align: center; margin: 10px 0px; color: #626aef"> Welcome Back </el-col>
 						<el-col :span="24" class="text-3.3" style="text-align: center; margin: 10px 0px">
-							<el-icon><Unlock /></el-icon> Sign in to continue to {{ APP_NAME }}
+							<el-icon><Unlock /></el-icon> Sign in to continue to {{ !!appState.params.app_name ? appState.params.app_name : APP_NAME }}
 						</el-col>
 					</el-row>
 
