@@ -157,6 +157,9 @@ router.beforeEach(async (to, from) => {
 	const appState = useAppStateStore();
 	appState.loading = true;
 
+	const { getRoles } = await import('~/config/StartApp');
+	await getRoles();
+
 	if (!!to.query.auth && to.query.auth !== '') {
 		// const api = axios.create({
 		// 	withCredentials: true,
