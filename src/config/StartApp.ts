@@ -16,7 +16,17 @@ export const initApp = async function () {
 			}
 		}
 		await userState.refreshToken();
+	} catch {
+		// catch error to start app on success or failure
+	}
+};
 
+export const getRoles = async function () {
+	const appState = useAppStateStore();
+	const userState = useConnectStateStore();
+
+	if (!!appState.roles && Object.keys(appState.roles).length > 0) {
+	} else {
 		if (!!userState.user && !!userState.user.token) {
 			const dpRoles: SdProvider = {
 				providerId: 'getroles-all',
@@ -35,8 +45,6 @@ export const initApp = async function () {
 				}
 			);
 		}
-	} catch {
-		// catch error to start app on success or failure
 	}
 };
 
