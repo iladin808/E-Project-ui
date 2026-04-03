@@ -398,8 +398,12 @@ const updateViewNotify = async () => {
 	margin-right: 0px;
 }
 .el-sub-menu.menu-custom .el-icon.icon-logo {
-	width: 35px;
-	height: 35px;
+	width: 42px;
+	height: 42px;
+	svg{
+	width: 42px;
+	height: 42px;
+	}
 }
 
 .menu-custom-poper {
