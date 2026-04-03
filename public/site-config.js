@@ -10,8 +10,8 @@ const REFRESH_TOKEN = 1000 * 60 * 60 * 1;
 const APP_IMG_LOGO = '/favicon/favicon-32x32.png';
 const APP_SVG_LOGO = 'logo';
 const APP_LOGO_TYPE = 'svg';
-const APP_NAME = 'My StarterKit';
-const APP_SLOGAN = 'Powered by initCraft ©2025';
+const APP_NAME = 'E-Project';
+const APP_SLOGAN = 'Faculty Of Engineering NU';
 const APP_VERSION = 'v1.5.0';
 
 window.APP_CONFIG = {
