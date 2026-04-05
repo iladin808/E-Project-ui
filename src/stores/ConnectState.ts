@@ -179,6 +179,7 @@ export const useConnectStateStore = defineStore('connectState', {
 			} else {
 				localStorage.removeItem('user-remember');
 			}
+			data.conn = false;
 			await axios
 				.post(`${this.host}/user/login`, data)
 				.then((response) => {
